@@ -1,0 +1,258 @@
+﻿Build started 4/2/2014 3:30:52 PM.
+     1>Project "C:\Users\Tim\Documents\Visual Studio 2013\Projects\markanoid\markanoid\markanoid.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ball.cpp BallContainer.cpp Block.cpp BlockArrayHandler.cpp CollidableObject.cpp ControlsMenu.cpp Engine.cpp FileIO.cpp keyBinds.cpp LastFrameCollisions.cpp main.cpp MainMenu.cpp MenuHandler.cpp Paddle.cpp PlayerPaddleHandler.cpp PowerupContainer.cpp PowerupHandler.cpp ResMan.cpp Score.cpp Settings.cpp SettingsMenu.cpp SoundMan.cpp Timer.cpp
+         Ball.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         BallContainer.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+         Block.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         BlockArrayHandler.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(195): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(216): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(232): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         CollidableObject.cpp
+         ControlsMenu.cpp
+         Engine.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(51): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(195): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(216): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(232): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Engine.h(48): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Engine.h(74): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Engine.h(86): warning C4390: ';' : empty controlled statement found; is this the intent?
+         FileIO.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+         keyBinds.cpp
+         LastFrameCollisions.cpp
+         main.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(51): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(195): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(216): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(232): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Engine.h(48): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Engine.h(74): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Engine.h(86): warning C4390: ';' : empty controlled statement found; is this the intent?
+         MainMenu.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(51): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(195): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(216): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(232): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>MainMenu.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+         MenuHandler.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(51): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(195): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(216): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(232): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BlockArrayHandler.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Paddle.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         PlayerPaddleHandler.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         PowerupContainer.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         PowerupHandler.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Ball.h(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(39): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Paddle.h(78): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupContainer.h(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(58): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(77): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\BallContainer.h(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(195): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(216): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\PowerupHandler.h(232): warning C4018: '<' : signed/unsigned mismatch
+         ResMan.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\ResMan.h(49): warning C4018: '<' : signed/unsigned mismatch
+         Score.cpp
+     1>Score.cpp(18): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Settings.cpp
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\FileIO.h(91): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(51): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\Settings.h(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Compiling...
+         SettingsMenu.cpp
+     1>SettingsMenu.cpp(98): warning C4101: 'ret' : unreferenced local variable
+         SoundMan.cpp
+         Timer.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tim\Documents\Visual Studio 2013\Projects\markanoid\Release\markanoid.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\Tim\Documents\sfml\lib "sfml-audio.lib" "sfml-graphics.lib" "sfml-network.lib" "sfml-window.lib" "sfml-system.lib" sfgui.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Tim\Documents\Visual Studio 2013\Projects\markanoid\Release\markanoid.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tim\Documents\Visual Studio 2013\Projects\markanoid\Release\markanoid.lib" /MACHINE:X86 /SAFESEH Release\Ball.obj
+         Release\BallContainer.obj
+         Release\Block.obj
+         Release\BlockArrayHandler.obj
+         Release\CollidableObject.obj
+         Release\ControlsMenu.obj
+         Release\Engine.obj
+         Release\FileIO.obj
+         Release\keyBinds.obj
+         Release\LastFrameCollisions.obj
+         Release\main.obj
+         Release\MainMenu.obj
+         Release\MenuHandler.obj
+         Release\Paddle.obj
+         Release\PlayerPaddleHandler.obj
+         Release\PowerupContainer.obj
+         Release\PowerupHandler.obj
+         Release\ResMan.obj
+         Release\Score.obj
+         Release\Settings.obj
+         Release\SettingsMenu.obj
+         Release\SoundMan.obj
+         Release\Timer.obj
+         Generating code
+     1>c:\users\tim\documents\visual studio 2013\projects\markanoid\markanoid\menuhandler.cpp(84): warning C4715: 'MenuHandler::runMenu' : not all control paths return a value
+         Finished generating code
+         markanoid.vcxproj -> C:\Users\Tim\Documents\Visual Studio 2013\Projects\markanoid\Release\markanoid.exe
+     1>Done Building Project "C:\Users\Tim\Documents\Visual Studio 2013\Projects\markanoid\markanoid\markanoid.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:28.23
