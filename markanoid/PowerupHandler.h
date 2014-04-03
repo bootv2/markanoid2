@@ -1,6 +1,6 @@
 #pragma once
 
-#define ptrArgs SoundMan* _sman, sf::RenderWindow* _pRenderWindow, Paddle* _pPaddle, std::vector<Block>* _blckStor, std::vector<Ball>* _bStor, int* _score, int* _ballAmount, int* _availableLives, ResMan* _res, float* _powContainerFallSpeed, BallContainer* _pBallCont
+#define ptrArgs SoundMan* _sman, sf::RenderWindow* _pRenderWindow, Paddle* _pPaddle, std::vector<Block>* _blckStor, std::vector<Ball>* _bStor, Score* pScore, int* _ballAmount, int* _availableLives, ResMan* _res, float* _powContainerFallSpeed, BallContainer* _pBallCont
 
 class PowerupHandler
 {
@@ -18,7 +18,8 @@ private:
 	std::vector<Block>* pBlockStorage;
 	std::vector<Ball>* pBallStorage;
 	std::vector<std::vector<Timer>> timerStorage;
-	int* ballAmount, *score, *availableLives;
+	int* ballAmount, *availableLives;
+	Score* score;
 	Ball* defBall;
 	std::vector<PowerupContainer> powContainer;
 	float* powContainerFallSpeed;
@@ -30,7 +31,7 @@ private:
 	void drawAvailableLives()
 	{
 		powShape.setRadius(10.f);
-		powShape.setTexture(pResourceMan->getTexture("heart.png"));
+		powShape.setTexture(pResourceMan->getTexture("res/txt/heart.png"));
 		for (int i = 0; i < *availableLives; i++)
 		{
 			powShape.setPosition(sf::Vector2f(windowWidth - (25.f * i), 25.f));
@@ -41,18 +42,20 @@ private:
 	//the laser collision
 	void PowerupHandler::laserCollision()
 	{
-		sf::RectangleShape tLaserShape;
-		tLaserShape.setSize(sf::Vector2f(playerPaddle->shape.getSize().x, windowHeight));
-		tLaserShape.setPosition(sf::Vector2f(playerPaddle->left(), 0));
+		Laser tLaser(pBlockStorage, score);
+		tLaser.prepCollision(playerPaddle->shape.getPosition(), playerPaddle->paddleWidth, windowHeight);
+		std::cout << tLaser.left() << " | " << tLaser.right() << " | " << tLaser.top() << " | " << tLaser.bottom() << std::endl;
 		for (int i = 0; i < pBlockStorage->size(); i++)
 		{
 			if (pBlockStorage->at(i).destroyed) continue;
 			else
 			{
-				if (!isIntersecting(tLaserShape, pBlockStorage->at(i))) continue;
-				else
+				//std::cout << "lasercol called" << std::endl;
+				if (isIntersecting(tLaser, pBlockStorage->at(i)))
 				{
-					*score++;
+					std::cout << "lasercol found\n";
+					if (i % 4 == 0)
+						score->addscore(1, "Laser Collision: .25 points/block", pBlockStorage->at(i).shape.getPosition());
 					pBlockStorage->at(i).destroyed = true;
 				}
 			}
@@ -186,11 +189,11 @@ public:
 	{
 		powShape.setRadius(20);
 		powShape.setRadius(10);
-		powPaths.emplace_back("laser.png");
-		powPaths.emplace_back("tripleball.png");
-		powPaths.emplace_back("widepaddle.png");
-		powPaths.emplace_back("heart.png");
-		powPaths.emplace_back("slow.png");
+		powPaths.emplace_back("res/txt/laser.png");
+		powPaths.emplace_back("res/txt/tripleball.png");
+		powPaths.emplace_back("res/txt/widepaddle.png");
+		powPaths.emplace_back("res/txt/heart.png");
+		powPaths.emplace_back("res/txt/slow.png");
 
 		for (int i = 0; i < powPaths.size(); i++)
 		{
@@ -269,7 +272,7 @@ public:
 		playerPaddle = _pPaddle;
 		pBlockStorage = _blckStor;
 		pBallStorage = _bStor;
-		score = _score;
+		score = pScore;
 		ballAmount = _ballAmount;
 		availableLives = _availableLives;
 		pResourceMan = _res;
@@ -313,8 +316,19 @@ public:
 				drawableContainerShape = PowerupContainer.getShapeAddress();
 				if (isIntersecting(PowerupContainer, *playerPaddle))
 				{
+					score->addscore(20, "Pow Pickup: 20 Points", playerPaddle->shape.getPosition());
 					powIdStorage.at(PowerupContainer.getPowID())++;
 					PowerupContainer.setExisting(false);
+				}
+				//check for ball/powcontainer intersections and pick up the powerup if a intersection is detected
+				for (auto& Ball : *pBallStorage)
+				{
+					if (isIntersecting(Ball, PowerupContainer))
+					{
+						score->addscore(100, "Mid-Air Pow Pickup! 100 Points", Ball.shape.getPosition());
+						powIdStorage.at(PowerupContainer.getPowID())++;
+						PowerupContainer.setExisting(false);
+					}
 				}
 			}
 		}

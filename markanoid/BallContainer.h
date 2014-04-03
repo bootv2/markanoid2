@@ -12,6 +12,7 @@ private:
 	int* ballAmount, *availableLives;
 	float leftoverTime = 0;
 	float elapsedTime = 0;
+	const int maxloops = 500;
 
 	sf::RenderWindow* pRenderWindow;
 public:
@@ -25,7 +26,7 @@ public:
 		windowHeight = _windowHeight;
 		globResMan = _res;
 		//Create a default ball with default coordinates originating at half the windowWidth and about the height of the paddle
-		defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("ball.png"));
+		defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("res/txt/ball.png"));
 		ballContainer.emplace_back(*defaultBall);
 		frameTime.reset();
 	}
@@ -45,7 +46,7 @@ public:
 		*ballAmount = 0;
 		ballContainer.clear();
 		delete defaultBall;
-		defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("ball.png"));
+		defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("res/txt/ball.png"));
 		ballContainer.emplace_back(*defaultBall);
 	}
 
@@ -55,15 +56,15 @@ public:
 		for (int i = 0; i < amountOfBallsBeforeLoop; i++)
 		{
 			delete defaultBall;
-			defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("ball.png"));
+			defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("res/txt/ball.png"));
 			defaultBall->shape.setPosition(ballContainer.at(i).shape.getPosition().x - 20, ballContainer.at(i).shape.getPosition().y - 20);
-			defaultBall->setVelocity(ballContainer.at(0).getVelocity());
+			defaultBall->setVel2f(ballContainer.at(0).getVel2f());
 			ballContainer.emplace_back(*defaultBall);
 			delete defaultBall;
-			defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("ball.png"));
-			defaultBall->setVelocity(ballContainer.at(0).getVelocity());
+			defaultBall = new Ball(windowWidth / 2, (windowHeight / 2) + ((windowHeight / 2) - 50), windowHeight, windowWidth, globResMan->getTexture("res/txt/ball.png"));
+			defaultBall->setVel2f(ballContainer.at(0).getVel2f());
 			defaultBall->shape.setPosition(ballContainer.at(i).shape.getPosition().x + 20, ballContainer.at(i).shape.getPosition().y + 20);
-			std::cout << defaultBall->shape.getPosition().x << " : " << defaultBall->shape.getPosition().y;
+			//std::cout << defaultBall->shape.getPosition().x << " : " << defaultBall->shape.getPosition().y;
 			ballContainer.emplace_back(*defaultBall);
 		}
 		*ballAmount = *ballAmount * 3;
@@ -77,10 +78,13 @@ public:
 		elapsedTime += frameTime.reset();
 		//std::cout << std::to_string(elapsedTime) << std::endl;
 		//std::cout << "ballContainerSize = " << ballContainer.size() << std::endl;
-		for (int i = 0; i < ballContainer.size(); i++)
+		for (int z = 0; elapsedTime > 1; elapsedTime -= 1)
 		{
-			for (; elapsedTime > 1; elapsedTime -= 1)
+			z++;
+			if (z > maxloops) throw 9999;
+			for (int i = 0; i < ballContainer.size(); i++)
 			{
+			
 				if(ballContainer.size() > 0) ballContainer.at(i).update(1.f);
 				for (int y = 0; y < pBlockArray->size(); y++)
 				{
@@ -123,6 +127,11 @@ public:
 	void drawAll()
 	{
 		for (auto& Ball : ballContainer) pRenderWindow->draw(Ball.shape);
+	}
+
+	void resetAllBallHits()
+	{
+		for (auto& Ball : ballContainer) Ball.resethits();
 	}
 };
 

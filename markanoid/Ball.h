@@ -8,6 +8,8 @@ private:
 	LastFrameCollisions ballCol;
 public:
 
+	bool bothit{ false }, tophit{ false }, lefthit{ false }, righthit{ false };
+
 	//Create a constant float value for the ball size.
 	float ballRadius{ 10.f }, ballVelocity{ 20.f };
 	
@@ -50,7 +52,7 @@ public:
 	//mY > starting y coordinate
 	Ball::Ball(float mX, float mY, int wH, int wW, sf::Texture* pText)
 	{
-		ballRotationSpeed = new float(0.0075);
+		ballRotationSpeed = new float(0.075);
 		directionalVector = new float(atan2(-ballVelocity, -ballVelocity));
 		bTimer.setReturnVal(false);
 		//Apply the ball's position, radius, color, and origin to the circleShape
@@ -95,6 +97,16 @@ public:
 	void setVelocity(float v)
 	{
 		ballVelocity = v;
+	}
+
+	void setVel2f(sf::Vector2f vel2f)
+	{
+		velocity = vel2f;
+	}
+	
+	sf::Vector2f getVel2f()
+	{
+		return velocity;
 	}
 
 	float getVelocity()
@@ -158,6 +170,14 @@ public:
 	{
 		firstUpdate = true;
 		bTimer.reset();
+	}
+
+	void resethits()
+	{
+		tophit = false;
+		bothit = false;
+		lefthit = false;
+		righthit = false;
 	}
 
 };

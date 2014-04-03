@@ -4,10 +4,10 @@ class CollidableRect
 public:
 	float x()		{ return shape.getPosition().x; }
 	float y()		{ return shape.getPosition().y; }
-	float left()	{ return x() - shape.getSize().x / 2; }
-	float right()	{ return x() + shape.getSize().x / 2; }
-	float top()		{ return y() - shape.getSize().y / 2; }
-	float bottom()	{ return y() + shape.getSize().y / 2; }
+	float left()	{ return x(); }
+	float right()	{ return x() + shape.getSize().x; }
+	float top()		{ return 0; }
+	float bottom()	{ return windowheight; }
 	CollidableRect()
 	{
 
@@ -17,6 +17,7 @@ public:
 
 	}
 	sf::RectangleShape shape;
+	int windowheight = 0;
 };
 
 

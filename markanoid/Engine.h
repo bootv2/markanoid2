@@ -31,7 +31,7 @@ private:
 	//game variables
 	int availableLives = 1;
 	int ballAmount = 1;
-	int score = 0;
+	int* score;
 	Score* gameScore;
 	PowerupHandler* powHandler;
 	float* paddleVelocity, *powContainerFallingSpeed, *ballVelocity;
@@ -64,37 +64,36 @@ public:
 		vidMode = new sf::VideoMode(windowWidth, windowHeight);
 
 		rWindow = new sf::RenderWindow(*vidMode, "Markanoid");
-		rWindow->setFramerateLimit(maxFPS);
-
-		gameScore = new Score(rWindow, &windowWidth, &windowHeight);
-
+		//if(debug) rWindow->setFramerateLimit(maxFPS);
 		//blocksHandler = new BlockArrayHandler(&windowWidth, &windowHeight, &score, &framenum, powHandler, *powContainerFallingSpeed, sndMan);
 
-		if (!resourceMan->addTexture("laser.png"));// throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("tripleball.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("widepaddle.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("heart.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("slow.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("ball.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/laser.png"));// throw 1;//TODO throw exception
+		if (!resourceMan->addTexture("res/txt/tripleball.png")) throw 1;//TODO throw exception
+		if (!resourceMan->addTexture("res/txt/widepaddle.png")) throw 1;//TODO throw exception
+		if (!resourceMan->addTexture("res/txt/heart.png")) throw 1;//TODO throw exception
+		if (!resourceMan->addTexture("res/txt/slow.png")) throw 1;//TODO throw exception
+		if (!resourceMan->addTexture("res/txt/ball.png")) throw 1;
+
+		if (!resourceMan->addTexture("res/txt/kenney.nl/blocks/1hp.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/kenney.nl/blocks/2hp.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/kenney.nl/blocks/3hp.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/kenney.nl/blocks/4hp.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/kenney.nl/blocks/infhp.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/kenney.nl/emptyprogress.png")) throw 1;
+		if (!resourceMan->addTexture("res/txt/kenney.nl/fullprogress.png")) throw 1;
 
 		if (debug) std::cout << "Resource loading succesful!\n";
-		gameScore = new Score(rWindow, &windowWidth, &windowHeight);
 
-		blocksHandler = new BlockArrayHandler(&windowWidth, &windowHeight, &score, &framenum, powHandler, *powContainerFallingSpeed, sndMan);
+		gameScore = new Score(rWindow, &windowWidth, &windowHeight, resourceMan);
 
-		if (!resourceMan->addTexture("laser.png"));// throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("tripleball.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("widepaddle.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("heart.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("slow.png")) throw 1;//TODO throw exception
-		if (!resourceMan->addTexture("ball.png")) throw 1;
+		score = gameScore->getScoreAddress();
 
-		if (debug) std::cout << "Resource loading succesful!\n";
+		blocksHandler = new BlockArrayHandler(&windowWidth, &windowHeight, gameScore, &framenum, powHandler, *powContainerFallingSpeed, sndMan, resourceMan);
 
 		pBallContainer = new BallContainer(windowWidth, windowHeight, resourceMan, rWindow, &availableLives, &ballAmount);
 
 		powHandler->bindPointers(sndMan, rWindow, playerPaddle->getPPaddle(), blocksHandler->getPBlockStorage(), pBallContainer->getBallVectorAddress(),
-			&score, &ballAmount, &availableLives, resourceMan, powContainerFallingSpeed, pBallContainer);
+			gameScore, &ballAmount, &availableLives, resourceMan, powContainerFallingSpeed, pBallContainer);
 		powHandler->setDebug(debug);
 
 		if (debug) std::cout << "powHandler pointer bind successful!\n";
@@ -163,28 +162,29 @@ public:
 				pBallContainer->newGame();
 				powHandler->newGame();
 				blocksHandler->newGame();
-				score = 0;
 				ballAmount = 1;
 				availableLives++;
 			}
-
-			score = framenum;
 
 			rWindow->clear(sf::Color::Black);
 			powHandler->updateAll();
 			playerPaddle->updatePaddle();
 			pBallContainer->updateAll(playerPaddle->getPPaddle(), blocksHandler->getPBlockStorage());
+			blocksHandler->testCollisions();
+			gameScore->updateAll();
 
-			//gameScore->printScore();
 			blocksHandler->drawAll(rWindow);
 			playerPaddle->drawPaddle(rWindow);
 			pBallContainer->drawAll();
 			powHandler->drawAll();
+			gameScore->printScore();
 
 			rWindow->display();
 
 			//if (debug) std::cout << "drawing for frame number " << framenum << " done\n";
 			framenum++;
+
+			pBallContainer->resetAllBallHits();
 
 
 		}

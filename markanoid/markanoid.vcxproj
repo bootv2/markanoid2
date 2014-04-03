@@ -97,6 +97,7 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="FileIO.cpp" />
     <ClCompile Include="keyBinds.cpp" />
+    <ClCompile Include="Laser.cpp" />
     <ClCompile Include="LastFrameCollisions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
@@ -123,6 +124,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="FileIO.h" />
     <ClInclude Include="keyBinds.h" />
+    <ClInclude Include="Laser.h" />
     <ClInclude Include="LastFrameCollisions.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MenuHandler.h" />

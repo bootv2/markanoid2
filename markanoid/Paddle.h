@@ -83,12 +83,14 @@ public:
 	{
 		shape.setOrigin(sf::Vector2f(shape.getSize().x, paddleHeight / 2));
 		shape.setSize(sf::Vector2f(shape.getSize().x * 2, paddleHeight));
+		paddleWidth = paddleWidth * 2;
 	}
 
 	void powReset()
 	{
 		shape.setOrigin(sf::Vector2f(shape.getSize().x / 4, paddleHeight / 2));
 		shape.setSize(sf::Vector2f(shape.getSize().x / 2, paddleHeight));
+		paddleWidth = paddleWidth / 2;
 	}
 
 	void pauseUpdate()
